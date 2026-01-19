@@ -215,5 +215,10 @@ body {
   line-height: 1.8;
 }
 
+.skills-section h2{
+    color: #ff6f91;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 
