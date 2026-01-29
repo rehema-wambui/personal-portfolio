@@ -12,3 +12,24 @@ greetBtn.addEventListener("click", function() {
         greetingDisplay.style.fontFamily = "Engagement, cursive";
     }
 });
+
+const fadeInElements = document.querySelectorAll('.fade-in');
+
+function checkFadeIn() {
+  fadeInElements.forEach(section => {
+    const elementPosition = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight - 100;
+
+  
+    if (elementPosition < triggerPoint) {
+      section.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkFadeIn);
+
+document.addEventListener('DOMContentLoaded', checkFadeIn);
+
+
